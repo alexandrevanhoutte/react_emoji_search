@@ -1,13 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
 function SearchInput({callback}) {
 
-  const [value, setValue] = useState(null)
-
   function handleChange(e) {
-    setValue(e.target.value);
-    callback(value)
+    callback(e.target.value)
   }
 
   return (
